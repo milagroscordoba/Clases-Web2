@@ -37,3 +37,17 @@ const ProducotosConInteres = productos.map((producto)=>{
 })
 
 console.log(ProducotosConInteres)
+
+//Callback
+function x(cb){
+    const n = 1
+    //Pasamos un valor a la funcion de callback
+    cb(n)
+}
+// const saludo = ()=>{
+//    console.log('Se ejecuto el CB')    
+//}
+// X(saludo()) <--- No pasar la funcion ejecutada, sacar parentesis
+x((n) =>{
+    console.log('Se ejecuto el cb con el numero pasado por x: '+ n)
+})
