@@ -7,6 +7,7 @@ const rutas = express.Router();
 rutas.get('/', controlador.obtenerTodosLosLibros);
 rutas.get('/:id', controlador.obtenerLibroPorId);
 
+// Ejecutamos el cálculo, guardamos el resultado y finalmente respondemos.
 rutas.get(
   '/procedimiento/estadisticas',
   controlador.generarReporteInventario,

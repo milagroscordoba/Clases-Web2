@@ -18,6 +18,7 @@ async function obtenerLibroPorId(req, res) {
   try {
     const idBuscado = Number(req.params.id);
 
+    // Rechazamos IDs no numéricos, decimales o menores que 1 antes de buscar el libro.
     if (!Number.isInteger(idBuscado) || idBuscado <= 0) {
       return res.status(400).json({ mensaje: 'El ID debe ser un número entero positivo.' });
     }
@@ -46,6 +47,7 @@ async function generarReporteInventario(req, res, next) {
 
     const resultadoProcedimiento = {
       proceso_ejecutado: 'Estadísticas e inventario de la biblioteca',
+      // Registramos la fecha y hora de ejecución en formato ISO 8601 y zona UTC.
       fecha_ejecucion: new Date().toISOString(),
       resultado: {
         total_catalogo: totalLibros,
@@ -53,7 +55,7 @@ async function generarReporteInventario(req, res, next) {
         prestados: librosPrestados
       }
     };
-
+    // Compartimos el resultado con el middleware mediante la petición actual.
     req.resultadoProcedimiento = resultadoProcedimiento;
     return next();
   } catch (error) {
