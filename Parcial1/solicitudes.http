@@ -1,0 +1,15 @@
+### Obtener todos los libros de la biblioteca
+GET http://localhost:3000/api/libros
+Accept: application/json
+
+### Obtener un libro específico por ID (Libro existente)
+GET http://localhost:3000/api/libros/1
+Accept: application/json
+
+### Obtener un libro específico por ID (Libro inexistentes)
+GET http://localhost:3000/api/libros/99
+Accept: application/json
+
+### Ejecutar procedimiento de estadísticas de inventario
+GET http://localhost:3000/api/libros/procedimiento/estadisticas
+Accept: application/json

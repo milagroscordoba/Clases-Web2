@@ -1,11 +1,11 @@
-import express from 'express'
+import express from 'express';
+import rutasLibros from './rutas/rutas.mjs';
 
-const PUERTO = 3000
-const app = express()
+const app = express();
+const PUERTO = 3000;
 
-app.listen(PUERTO)
+app.use('/api/libros', rutasLibros);
 
-app.get('/productos',(req,res) => {
-    console.log()
-    res.json(datos)
-})
+app.listen(PUERTO, () => {
+  console.log(`Servidor de biblioteca en http://localhost:${PUERTO}`);
+});

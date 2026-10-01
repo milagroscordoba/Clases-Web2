@@ -1,0 +1,46 @@
+{
+  "libros": [
+    {
+      "id": 1,
+      "titulo": "Harry Potter y la piedra filosofal",
+      "autor": "J. K. Rowling",
+      "genero": "Fantasía",
+      "disponible": true
+    },
+    {
+      "id": 2,
+      "titulo": "Harry Potter y la cámara secreta",
+      "autor": "J. K. Rowling",
+      "genero": "Fantasía",
+      "disponible": false
+    },
+    {
+      "id": 3,
+      "titulo": "Harry Potter y el prisionero de Azkaban",
+      "autor": "J. K. Rowling",
+      "genero": "Fantasía",
+      "disponible": true
+    },
+    {
+      "id": 4,
+      "titulo": "It",
+      "autor": "Stephen King",
+      "genero": "Terror",
+      "disponible": true
+    },
+    {
+      "id": 5,
+      "titulo": "El resplandor",
+      "autor": "Stephen King",
+      "genero": "Terror",
+      "disponible": false
+    },
+    {
+      "id": 6,
+      "titulo": "Misery",
+      "autor": "Stephen King",
+      "genero": "Suspenso",
+      "disponible": true
+    }
+  ]
+}

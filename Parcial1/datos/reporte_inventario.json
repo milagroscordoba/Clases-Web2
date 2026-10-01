@@ -1,0 +1,9 @@
+{
+  "proceso_ejecutado": "Estadísticas e inventario de la biblioteca",
+  "fecha_ejecucion": "2026-10-01T13:07:37.736Z",
+  "resultado": {
+    "total_catalogo": 6,
+    "disponibles": 4,
+    "prestados": 2
+  }
+}
