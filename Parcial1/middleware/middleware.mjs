@@ -8,7 +8,7 @@ async function guardarReporteProcedimiento(req, res, next) {
     if (!req.resultadoProcedimiento) {
       return res.status(500).json({ mensaje: 'No se generó el resultado del procedimiento.' });
     }
-    // Guardamos el resultado como JSON antes de continuar hacia la respuesta.
+    // Guardamos el último reporte en JSON, reemplazando el anterior, antes de responder.
     const resultadoJSON = JSON.stringify(req.resultadoProcedimiento, null, 2);
     await writeFile(rutaReporte, resultadoJSON, 'utf-8');
 
